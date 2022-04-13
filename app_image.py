@@ -17,7 +17,6 @@ generate_pred = st.sidebar.button("Predict")
 
 model = tf.keras.models.load_model('model_emotions3.haf5')
 
-@checkcache
 def import_pred(image_data, model):
     size = (48,48)
     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
