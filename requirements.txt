@@ -1,6 +1,5 @@
-numpy~=
-streamlit~=1.8.1
-tensorflow~=2.8.0
-tensorflow-cpu
-PIL~=9.0.1
-h5py~=3.6.0
+h5py==3.6.0
+numpy==1.22.3
+Pillow==9.1.0
+streamlit==1.8.1
+tensorflow==2.8.0

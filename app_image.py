@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image, ImageOps
 import h5py
 
-#st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title('Facial Emotion Recognition')
 
