@@ -1,10 +1,11 @@
+from linecache import checkcache
 import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image, ImageOps
 import h5py
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
+#st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title('Facial Emotion Recognition')
 
@@ -14,9 +15,10 @@ upload_file = st.sidebar.file_uploader("Please upload an image file", type=["jpg
 
 generate_pred = st.sidebar.button("Predict")
 
-model = tf.keras.models.load_model('weights_emotions3.haf5')
+model = tf.keras.models.load_model('model_emotions3.haf5')
 
-def import_n_pred(image_data, model):
+@checkcache
+def import_pred(image_data, model):
     size = (48,48)
     image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
     img = np.asarray(image)
@@ -28,6 +30,7 @@ if generate_pred:
     image = Image.open(upload_file)
     with st.beta_expander('image', expanded=True):
         st.image(image, use_column_width=True)
-    pred = import_n_pred(image, model)
+    pred = import_pred(image, model)
+
     labels = ['Happy' , 'Neutral', 'Sad']
-    st.title("prediction of image is {}".format(labels[np.argmax(pred)]))
+    st.title("Prediction of Image is {}".format(labels[np.argmax(pred)]))

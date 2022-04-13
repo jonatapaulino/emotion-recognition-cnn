@@ -1,0 +1,6 @@
+numpy~=
+streamlit~=1.8.1
+tensorflow~=2.8.0
+tensorflow-cpu
+PIL~=9.0.1
+h5py~=3.6.0
