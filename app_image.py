@@ -7,13 +7,21 @@ import h5py
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-st.title('Facial Emotion Recognition')
+st.title('Welcome To Facial Emotion Recognition!')
+
+instructions = """
+        Click on the Browse files button to load an image of a face, after the 
+        image is loaded click on the predict button. The uploaded image will be 
+        sorted by the Deep Neural Network in real time and the output will be displayed 
+        on the screen according to the following sentiments: Happiness, Sadness or Neutral...
+        """
+st.write(instructions)
 
 st.write("This is a simple web app for image classification")
 
-upload_file = st.sidebar.file_uploader("Please upload an image file", type=["jpg", "png"])
+upload_file = st.file_uploader("Please upload an image file", type=['png', 'jpg'])
 
-generate_pred = st.sidebar.button("Predict")
+generate_pred = st.button("Predict")
 
 model = tf.keras.models.load_model('model_emotions3.haf5')
 
