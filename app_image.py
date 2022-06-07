@@ -6,7 +6,6 @@ from PIL import Image, ImageOps
 import h5py
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
-image = Image.open('C:\Users\jonat\Pictures\canaa')
 
 st.title('Bem vindo ao classificador de emoções!')
 
