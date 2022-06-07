@@ -7,7 +7,7 @@ import h5py
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-st.title('Welcome To Facial Emotion Recognition!')
+st.title('Bem vindo ao classificador de emoções!')
 
 instructions = """
         Click on the Browse files button to load an image of a face, after the 
