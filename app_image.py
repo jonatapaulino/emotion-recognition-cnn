@@ -10,14 +10,13 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Bem vindo ao classificador de emoções!')
 
 instructions = """
-        Click on the Browse files button to load an image of a face, after the 
-        image is loaded click on the predict button. The uploaded image will be 
-        sorted by the Deep Neural Network in real time and the output will be displayed 
-        on the screen according to the following sentiments: Happiness, Sadness or Neutral...
+        Click no botão Browse files para carregar uma imagem, depos que a 
+        imagem carregar click no botão predict e deixe que Rede Neural Classifique
+        a imagem em: Happiness, Sadness or Neutral...
         """
 st.write(instructions)
 
-st.write("This is a simple web app for image classification")
+st.write("Este é uma amostra de um simples classificador de emoões em imagens")
 
 upload_file = st.file_uploader("Please upload an image file", type=['png', 'jpg'])
 
