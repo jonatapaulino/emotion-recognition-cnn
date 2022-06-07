@@ -16,9 +16,9 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Bem vindo ao classificador de emoções!')
 
 instructions = """
-        Click no botão Browse files para carregar uma imagem, depos que a 
-        imagem carregar click no botão predict e deixe que Rede Neural Classifique
-        a imagem em: Happiness, Sadness or Neutral...
+        Click no botão Browse files para carregar uma imagem. Após o carregamento da imagem, 
+        click no botão predict e deixe que Rede Neural classifique
+        a imagem em: Happy (feliz), Sad (triste) or Neutral (neutro)...
         """
 st.write(instructions)
 
