@@ -7,6 +7,12 @@ import h5py
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
+#criando 3 colunas 
+col1, col2, col3 = st.beta_columns(3)
+foto = Image.open('canaa.png')
+#inserindo na coluna 2
+col2.image(foto, use_column_width=True)
+
 st.title('Bem vindo ao classificador de emoções!')
 
 instructions = """
