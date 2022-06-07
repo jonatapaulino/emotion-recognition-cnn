@@ -6,6 +6,7 @@ from PIL import Image, ImageOps
 import h5py
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
+image = Image.open('C:\Users\jonat\Pictures\canaa')
 
 st.title('Bem vindo ao classificador de emoções!')
 
@@ -16,7 +17,7 @@ instructions = """
         """
 st.write(instructions)
 
-st.write("Este é uma amostra de um simples classificador de emoões em imagens")
+st.write("Esta é uma amostra de um simples classificador de emoões em imagens")
 
 upload_file = st.file_uploader("Please upload an image file", type=['png', 'jpg'])
 
